@@ -207,7 +207,7 @@ syn keyword mcBool      contained true false
 hi def link mcBool      mcKeyword
 
 " Optional Slash
-syn match mcOptionalSlash /^\/\?/ nextgroup=mcCommand
+syn match mcOptionalSlash /^\(\s*\zs\)\/\?/ nextgroup=mcCommand
 hi def link mcOptionalSlash mcCommand
 
 " Errors
@@ -226,7 +226,7 @@ hi def link mcTheRestIsBad      mcError
 
 syn sync minlines=1
 
-syn match mcComment /^#.*/
+syn match mcComment /^\(\s*\zs\)#.*/
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""

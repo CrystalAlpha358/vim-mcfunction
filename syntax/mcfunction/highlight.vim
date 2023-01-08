@@ -2,24 +2,27 @@ hi def link mcError             Error
 hi def link mcChatMessage       String
 hi def link mcComment           Comment
 
-hi mcCommand            ctermfg=white ctermbg=Darkgrey        cterm=bold
-hi mcOp                 ctermfg=grey
-hi mcSelector           ctermfg=lightgreen           cterm=bold
+hi def link mcCommand        Statement
+hi def link mcOp             Operator
+hi def link mcSelector       PreProc
 
-hi mcCoordinate         ctermfg=green
-hi mcCoordinate2        ctermfg=green             cterm=bold
-hi mcCoordinate3        ctermfg=green
+hi def link mcCoordinate     Float
+hi def link mcCoordinate2    Float
+hi def link mcCoordinate3    Float
 
-hi mcKeyword                                    cterm=bold
-hi mcValue              ctermfg=lightblue
-hi mcKeyId              ctermfg=yellow      cterm=bold
-hi mcId                 ctermfg=yellow
+hi def link mcKeyword        Keyword
+hi def link mcValue          Constant
+hi def link mcKeyId          Type
+hi def link mcId             Type
 
-hi mcNBTBracket         ctermfg=grey            cterm=underline guisp=blue
-hi mcNBTPath            ctermfg=white           cterm=underline guisp=blue
-hi mcNBTPathDot         ctermfg=grey            cterm=underline guisp=blue
-hi mcNBTValue           ctermfg=lightblue       cterm=underline guisp=blue
-hi mcNBTSpace                                   cterm=underline guisp=blue
+hi def link mcNBTBracket     Special
+hi def link mcNBTPath        Identifier
+hi def link mcNBTPathDot     Special
+hi def link mcNBTValue       String
+hi def link mcNBTSpace       Special
+
+hi def link mcExecuteKeyword Conditional
+hi def link mcOptionalSlash  Error
 
 if (exists('g:mcJSONMethod') && g:mcJSONMethod =~ '\v\c<%(n%[one]|p%[lugin])>')
         hi mcJSONText cterm=underline guisp=green
@@ -49,7 +52,7 @@ endif
 " Top level execute keywords
 "execute as @a positioned as @s store entity @s Health byte 1 run kill @s
 "        ^^    ^^^^^^^^^^       ^^^^^                         ^^^
-hi mcExecuteKeyword ctermfg=white cterm=bold,italic
+"hi mcExecuteKeyword ctermfg=white cterm=bold,italic
 
 
 " @e[type=zombie]   grass_block[snowy=true]
