@@ -34,35 +34,35 @@ endif
 " but not for now.
 
 "Items/Blocks not in vanilla MC eg 'ghead', 'lucky_block'
-"hi mcBlock
+"hi def mcBlock
 
 "Items/Blocks in vanilla MC eg 'apple', 'fire', 'cracked_polished_blackstone_bricks'
 "(pls mojang we need infested_cracked_polished_blackstone_brick_slab)
-"hi mcBuiltinBlock
+"hi def mcBuiltinBlock
 
 "Entities not in vanilla MC eg 'unicorn', 'bullet'
-"hi mcEntity
+"hi def mcEntity
 
 "Entities in vanilla MC eg 'wither', 'zombified_piglin'
-"hi mcBuiltinEntity      ctermfg=
+"hi def mcBuiltinEntity      ctermfg=
 
 "Boolean values
-"hi mcBool
+"hi def mcBool
 
 " Top level execute keywords
 "execute as @a positioned as @s store entity @s Health byte 1 run kill @s
 "        ^^    ^^^^^^^^^^       ^^^^^                         ^^^
-"hi mcExecuteKeyword ctermfg=white cterm=bold,italic
+"hi def mcExecuteKeyword ctermfg=white cterm=bold,italic
 
 
 " @e[type=zombie]   grass_block[snowy=true]
 "    ^^^^                       ^^^^^
-"hi mcFilterKeyword
+"hi def mcFilterKeyword
 
 "Tags
-"hi mcTag
+"hi def mcTag
 
 
 " @e[type=zombie]   grass_block[snowy=true]
 "         ^^^^^^                      ^^^^
-"hi mcFilterValue
+"hi def mcFilterValue
